@@ -1,0 +1,227 @@
+:root {
+   --primary: #ee5b80;
+   --review: #663c9e;
+   --progress: #f55a81;
+   --pending: #ff4f00;
+   --main-bg: #e4e5e7;
+}
+
+*,
+*::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   list-style: none;
+}
+
+body {
+   background-color: var(--main-bg);
+   font-family: "Recursive", sans-serif;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+button {
+   outline: none;
+}
+
+/* Utility classes */
+.current {
+   color: var(--primary);
+}
+
+.current::after {
+   content: "";
+   position: absolute;
+   width: 95%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   z-index: -1;
+   background-color: var(--main-bg);
+   border-radius: 25px 0px 0px 25px;
+}
+
+/* Sidebar - Expanded */
+.sidebar-expanded {
+   width: 320px;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: var(--primary);
+   color: var(--main-bg);
+}
+
+.sidebar-expanded .sidebar-title {
+   padding: 1.5rem 2.5rem;
+   color: white;
+}
+.sidebar-expanded .sidebar-title span:last-child {
+   letter-spacing: 0.2rem;
+   margin-left: 0.5rem;
+   font-size: 2.2rem;
+}
+
+.sidebar-expanded .sidebar-menu {
+   height: 100%;
+}
+
+.sidebar-expanded .sidebar-menu ul {
+   margin-top: 2.5rem;
+}
+
+.sidebar-expanded .sidebar-menu ul li {
+   cursor: pointer;
+   position: relative;
+   padding: 1rem 2.5rem;
+   margin-bottom: 1rem;
+}
+
+.sidebar-expanded .sidebar-menu ul li:last-child {
+   margin-bottom: 0;
+}
+
+.sidebar-expanded .sidebar-menu ul li a {
+   /* border: 3px solid green; */
+   font-weight: 600;
+}
+
+.sidebar-expanded .sidebar-menu ul li a span {
+   margin-right: 1rem;
+}
+
+/* Sidebar - Collapsed */
+
+/* Header */
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: white;
+   height: 5rem;
+   padding: 0rem 1.2rem;
+   margin-left: 320px;
+   box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+header .header-item-left {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+header .header-item-left button {
+   border: none;
+   color: var(--primary);
+   background-color: white;
+   height: 100%;
+   font-size: 1.5rem;
+   margin-top: 0.3rem;
+   margin-right: 1rem;
+   padding: 0.5rem;
+   cursor: pointer;
+}
+
+header .header-item-left span {
+   color: #4e4e4e;
+   font-size: 1.5rem;
+}
+
+header .header-item-center {
+   padding: 0.3rem 1rem;
+   border: 2px solid var(--main-bg);
+   border-radius: 25px;
+}
+
+header .header-item-center span {
+   margin-right: 0.5rem;
+   opacity: 55%;
+}
+
+header .header-item-center input {
+   height: 2rem;
+   /* width: 8rem; */
+   border: none;
+   opacity: 55%;
+   outline: none;
+}
+
+header .header-item-right {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+header .header-item-right img {
+   height: 50px;
+   width: 50px;
+   margin-right: 1rem;
+   border-radius: 50%;
+}
+
+header .header-item-right span {
+   display: block;
+   font-size: 0.85rem;
+   margin-top: 0.3rem;
+   opacity: 30%;
+}
+
+/* Main with 4 cards */
+#stats {
+   /* border: 3px solid green; */
+
+   margin-top: 2rem;
+   padding: 0rem 1.2rem;
+   margin-left: 320px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#stats .card {
+   width: 17rem;
+   padding: 2rem 2rem;
+   background-color: white;
+   border-radius: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+}
+
+#stats .card .info span:first-child {
+   display: block;
+   font-size: 1.8rem;
+   font-weight: 900;
+   margin-bottom: 0.5rem;
+}
+
+#stats .card .info span:last-child {
+   opacity: 30%;
+}
+
+#stats .card .icon {
+   margin-left: 4rem;
+   font-size: 2.2rem;
+   color: var(--primary);
+}
+
+#stats .card:last-child {
+   background-color: var(--primary);
+   color: white;
+}
+
+#stats .card:last-child .info span:last-child {
+   opacity: 0.8;
+}
+
+#stats .card:last-child .icon {
+   color: white;
+}
