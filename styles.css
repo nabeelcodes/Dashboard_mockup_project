@@ -46,6 +46,7 @@ button {
    z-index: -1;
    background-color: var(--main-bg);
    border-radius: 25px 0px 0px 25px;
+   /* transition-delay: 2s; ???? */
 }
 
 /* Sidebar - Expanded */
@@ -57,6 +58,7 @@ button {
    left: 0;
    background-color: var(--primary);
    color: var(--main-bg);
+   overflow: hidden;
 }
 
 .sidebar-expanded .sidebar-title {
@@ -75,6 +77,7 @@ button {
 
 .sidebar-expanded .sidebar-menu ul {
    margin-top: 2.5rem;
+   overflow: hidden;
 }
 
 .sidebar-expanded .sidebar-menu ul li {
@@ -86,6 +89,10 @@ button {
 
 .sidebar-expanded .sidebar-menu ul li:last-child {
    margin-bottom: 0;
+}
+
+.sidebar-expanded .sidebar-menu ul li:hover a {
+   opacity: 0.7;
 }
 
 .sidebar-expanded .sidebar-menu ul li a {
