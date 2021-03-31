@@ -4,6 +4,7 @@
    --progress: #f55a81;
    --pending: #ff4f00;
    --main-bg: #e4e5e7;
+   --headings: #4e4e4e;
 }
 
 *,
@@ -129,7 +130,7 @@ header .header-item-left button {
 }
 
 header .header-item-left span {
-   color: #4e4e4e;
+   color: var(--headings);
    font-size: 1.5rem;
 }
 
@@ -174,8 +175,6 @@ header .header-item-right span {
 
 /* Main with 4 cards */
 #stats {
-   /* border: 3px solid green; */
-
    margin-top: 2rem;
    padding: 0rem 1.2rem;
    margin-left: 320px;
@@ -224,4 +223,54 @@ header .header-item-right span {
 
 #stats .card:last-child .icon {
    color: white;
+}
+
+/* Section with table and customer */
+#main-content {
+   margin-left: 320px;
+   margin-top: 2rem;
+   padding: 0rem 0.8rem;
+}
+
+#main-content .wrapper {
+   display: grid;
+   grid-template-columns: 3fr 1.5fr;
+   grid-gap: 1rem;
+}
+
+.content-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.content-header span {
+   color: var(--headings);
+   font-size: 1.2rem;
+   font-weight: 900;
+}
+
+.content-header button {
+   color: white;
+   background-color: var(--primary);
+   padding: 0.6rem 1rem;
+   border: none;
+   border-radius: 5px;
+}
+
+#main-content .wrapper .projects {
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+#main-content .wrapper .projects .project-table {
+}
+
+#main-content .wrapper .customers {
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
 }
