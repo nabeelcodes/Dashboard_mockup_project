@@ -18,7 +18,7 @@
    </head>
    <body>
       <!-- sidebar: expanded and collapsed -->
-      <div class="sidebar-expanded">
+      <div id="sidebar">
          <div class="sidebar-title">
             <span><i class="fas fa-draw-polygon fa-2x"></i></span>
             <span><strong>PolySoft</strong></span>
@@ -27,162 +27,220 @@
          <div class="sidebar-menu">
             <ul>
                <li class="sidebar-menu-item current">
-                  <a href="#"
-                     ><span><i class="fas fa-igloo"></i></span>Dashboard</a
-                  >
+                  <a href="#"><i class="fas fa-igloo"></i><span>Dashboard</span></a>
                </li>
                <li class="sidebar-menu-item">
-                  <a href="#"
-                     ><span><i class="fas fa-users"></i></span>Customers</a
-                  >
+                  <a href="#"><i class="fas fa-users"></i><span>Customers</span></a>
                </li>
                <li class="sidebar-menu-item">
-                  <a href="#"
-                     ><span><i class="far fa-clipboard"></i></span>Projects</a
-                  >
+                  <a href="#"><i class="far fa-clipboard"></i><span>Projects</span></a>
                </li>
                <li class="sidebar-menu-item">
-                  <a href="#"
-                     ><span><i class="fas fa-shopping-cart"></i></span>Orders</a
-                  >
+                  <a href="#"><i class="fas fa-shopping-cart"></i><span>Orders</span></a>
                </li>
                <li class="sidebar-menu-item">
-                  <a href="#"
-                     ><span><i class="fas fa-box-open"></i></span>Inventory</a
-                  >
+                  <a href="#"><i class="fas fa-box-open"></i><span>Inventory</span></a>
                </li>
                <li class="sidebar-menu-item">
-                  <a href="#"
-                     ><span><i class="far fa-user-circle"></i></span>Accounts</a
-                  >
+                  <a href="#"><i class="far fa-user-circle"></i><span>Accounts</span></a>
                </li>
                <li class="sidebar-menu-item">
-                  <a href="#"
-                     ><span><i class="far fa-clipboard"></i></span>Tasks</a
-                  >
+                  <a href="#"><i class="far fa-clipboard"></i><span>Tasks</span></a>
                </li>
             </ul>
          </div>
       </div>
 
-      <!-- navbar as header -->
-      <header>
-         <div class="header-item-left">
-            <button><i class="fas fa-chevron-left"></i></button>
-            <span><strong>Dashboard</strong></span>
-         </div>
-         <div class="header-item-center">
-            <span><i class="fas fa-search"></i></span>
-            <input type="search" placeholder="Search here" />
-         </div>
-         <div class="header-item-right">
-            <img src="./Resources/profile.jpg" alt="profile_image" />
-            <div>John Doe<span>Super admin</span></div>
-         </div>
-      </header>
+      <!-- Main = header + stats-section + main-content-section -->
+      <main id="main">
+         <!-- navbar as header -->
+         <header>
+            <div class="header-item-left">
+               <button class="before-collapse"><i class="fas fa-chevron-left"></i></button>
+               <span><strong>Dashboard</strong></span>
+            </div>
+            <div class="header-item-center">
+               <span><i class="fas fa-search"></i></span>
+               <input type="search" placeholder="Search here" />
+            </div>
+            <div class="header-item-right">
+               <img src="./Resources/profile.jpg" alt="profile_image" />
+               <div>John Doe<span>Super admin</span></div>
+            </div>
+         </header>
 
-      <!-- main with 4 cards -->
-      <main id="stats">
-         <div class="card">
-            <div class="info">
-               <span>54</span>
-               <span>Customers</span>
+         <!-- section with 4 cards -->
+         <section id="stats">
+            <div class="card">
+               <div class="info">
+                  <span>54</span>
+                  <span>Customers</span>
+               </div>
+               <div class="icon">
+                  <span><i class="fas fa-users"></i></span>
+               </div>
             </div>
-            <div class="icon">
-               <span><i class="fas fa-users"></i></span>
-            </div>
-         </div>
 
-         <div class="card">
-            <div class="info">
-               <span>79</span>
-               <span>Projects</span>
+            <div class="card">
+               <div class="info">
+                  <span>79</span>
+                  <span>Projects</span>
+               </div>
+               <div class="icon">
+                  <span><i class="far fa-clipboard"></i></span>
+               </div>
             </div>
-            <div class="icon">
-               <span><i class="far fa-clipboard"></i></span>
-            </div>
-         </div>
 
-         <div class="card">
-            <div class="info">
-               <span>124</span>
-               <span>Orders</span>
+            <div class="card">
+               <div class="info">
+                  <span>124</span>
+                  <span>Orders</span>
+               </div>
+               <div class="icon">
+                  <span><i class="fas fa-shopping-cart"></i></span>
+               </div>
             </div>
-            <div class="icon">
-               <span><i class="fas fa-shopping-cart"></i></span>
-            </div>
-         </div>
 
-         <div class="card">
-            <div class="info">
-               <span>$6k</span>
-               <span>Income</span>
+            <div class="card">
+               <div class="info">
+                  <span>$6k</span>
+                  <span>Income</span>
+               </div>
+               <div class="icon">
+                  <span><i class="fas fa-wallet"></i></span>
+               </div>
             </div>
-            <div class="icon">
-               <span><i class="fas fa-wallet"></i></span>
+         </section>
+
+         <!-- section with table and customer -->
+         <section id="main-content">
+            <div class="wrapper">
+               <div class="projects">
+                  <div class="content-header">
+                     <span>Recent Projects</span>
+                     <button>See All</button>
+                  </div>
+
+                  <div class="project-table">
+                     <table>
+                        <thead>
+                           <tr>
+                              <td>Project Title</td>
+                              <td>Department</td>
+                              <td>Status</td>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>UI/UX Design</td>
+                              <td>UI Team</td>
+                              <td><span class="status-circle review"></span>review</td>
+                           </tr>
+                           <tr>
+                              <td>Web Development</td>
+                              <td>FrontEnd</td>
+                              <td><span class="status-circle progress"></span>in progress</td>
+                           </tr>
+                           <tr>
+                              <td>UShop App</td>
+                              <td>Mobile Team</td>
+                              <td><span class="status-circle pending"></span>pending</td>
+                           </tr>
+                           <tr>
+                              <td>UI/UX Design</td>
+                              <td>UI Team</td>
+                              <td><span class="status-circle review"></span>review</td>
+                           </tr>
+                           <tr>
+                              <td>Web Development</td>
+                              <td>FrontEnd</td>
+                              <td><span class="status-circle progress"></span>in progress</td>
+                           </tr>
+                           <tr>
+                              <td>UShop App</td>
+                              <td>Mobile Team</td>
+                              <td><span class="status-circle pending"></span>pending</td>
+                           </tr>
+                           <tr>
+                              <td>UI/UX Design</td>
+                              <td>UI Team</td>
+                              <td><span class="status-circle review"></span>review</td>
+                           </tr>
+                           <tr>
+                              <td>Web Development</td>
+                              <td>FrontEnd</td>
+                              <td><span class="status-circle progress"></span>in progress</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+
+               <div class="customers">
+                  <div class="content-header">
+                     <span>New Customers</span>
+                     <button>See All</button>
+                  </div>
+
+                  <div class="customer-card">
+                     <div class="customer-info">
+                        <img src="./Resources/profile.jpg" alt="profile_image" />
+                        <div>Lewis S. Cunningham<span>CEO</span></div>
+                     </div>
+                     <div class="customer-contact">
+                        <span><i class="far fa-user-circle"></i></span>
+                        <span><i class="far fa-comment-alt"></i></span>
+                        <span><i class="fas fa-phone-alt"></i></span>
+                     </div>
+                  </div>
+                  <div class="customer-card">
+                     <div class="customer-info">
+                        <img src="./Resources/profile.jpg" alt="profile_image" />
+                        <div>Lewis S. Cunningham<span>CEO</span></div>
+                     </div>
+                     <div class="customer-contact">
+                        <span><i class="far fa-user-circle"></i></span>
+                        <span><i class="far fa-comment-alt"></i></span>
+                        <span><i class="fas fa-phone-alt"></i></span>
+                     </div>
+                  </div>
+                  <div class="customer-card">
+                     <div class="customer-info">
+                        <img src="./Resources/profile.jpg" alt="profile_image" />
+                        <div>Lewis S. Cunningham<span>CEO</span></div>
+                     </div>
+                     <div class="customer-contact">
+                        <span><i class="far fa-user-circle"></i></span>
+                        <span><i class="far fa-comment-alt"></i></span>
+                        <span><i class="fas fa-phone-alt"></i></span>
+                     </div>
+                  </div>
+                  <div class="customer-card">
+                     <div class="customer-info">
+                        <img src="./Resources/profile.jpg" alt="profile_image" />
+                        <div>Lewis S. Cunningham<span>CEO</span></div>
+                     </div>
+                     <div class="customer-contact">
+                        <span><i class="far fa-user-circle"></i></span>
+                        <span><i class="far fa-comment-alt"></i></span>
+                        <span><i class="fas fa-phone-alt"></i></span>
+                     </div>
+                  </div>
+                  <div class="customer-card">
+                     <div class="customer-info">
+                        <img src="./Resources/profile.jpg" alt="profile_image" />
+                        <div>Lewis S. Cunningham<span>CEO</span></div>
+                     </div>
+                     <div class="customer-contact">
+                        <span><i class="far fa-user-circle"></i></span>
+                        <span><i class="far fa-comment-alt"></i></span>
+                        <span><i class="fas fa-phone-alt"></i></span>
+                     </div>
+                  </div>
+               </div>
             </div>
-         </div>
+         </section>
       </main>
-
-      <!-- section with table and customer -->
-      <section id="main-content">
-         <div class="wrapper">
-            <div class="projects">
-               <div class="content-header">
-                  <span>Recent Projects</span>
-                  <button>See All</button>
-               </div>
-
-               <div class="project-table">
-                  <table>
-                     <thead>
-                        <tr>
-                           <td>Project Title</td>
-                           <td>Department</td>
-                           <td>Status</td>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>UI/UX Design</td>
-                           <td>UI Team</td>
-                           <td><span class="status-circle review"></span>review</td>
-                        </tr>
-                        <tr>
-                           <td>Web Development</td>
-                           <td>FrontEnd</td>
-                           <td><span class="status-circle progress"></span>review</td>
-                        </tr>
-                        <tr>
-                           <td>UShop App</td>
-                           <td>Mobile Team</td>
-                           <td><span class="status-circle pending"></span>review</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            </div>
-
-            <div class="customers">
-               <div class="content-header">
-                  <span>New Customers</span>
-                  <button>See All</button>
-               </div>
-
-               <div class="customer-card">
-                  <div class="customer-info">
-                     <!-- <img src="./Resources/profile.jpg" alt="profile_image" /> -->
-                     <div>Lewis S. Cunningham<span>CEO</span></div>
-                  </div>
-                  <div class="customer contact">
-                     <span><i class="far fa-user-circle"></i></span>
-                     <span><i class="far fa-comment-alt"></i></span>
-                     <span><i class="fas fa-phone-alt"></i></span>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
 
       <!-- Javascript -->
       <script src="app.js"></script>
